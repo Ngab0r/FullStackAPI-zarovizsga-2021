@@ -5,7 +5,7 @@ let run = false;
 let running = false;
 
 setTimeout(() => {
-  fs.watch('./src', { recursive: false }, (eventType, filename) => {
+  fs.watch('./src', { recursive: true }, (eventType, filename) => {
     console.log('Files changed: ', eventType, filename);
     if (running) {
       return;
